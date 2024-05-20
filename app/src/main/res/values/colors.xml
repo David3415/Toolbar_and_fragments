@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="toolbar">#aa3333</color>
     <color name="toolbar1">#aa0033</color>
+    <color name="bottomBar1">#ffffff</color>
+    <color name="bottomBar2">#ffcccc</color>
 </resources>
