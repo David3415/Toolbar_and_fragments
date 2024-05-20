@@ -5,28 +5,28 @@
         android:id="@+id/ic_sync"
         android:icon="@drawable/ic_sync"
         android:title="Sync"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:orderInCategory="100"
         ></item>
     <item
         android:id="@+id/ic_search"
         android:icon="@drawable/ic_search"
         android:title="Search"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:orderInCategory="101"
         ></item>
     <item
         android:id="@+id/ic_save"
         android:icon="@drawable/ic_save"
         android:title="Search"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:orderInCategory="102"
         ></item>
     <item
         android:id="@+id/ic_del"
         android:icon="@drawable/ic_del"
         android:title="Search"
-        app:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:orderInCategory="103"
         ></item>
 </menu>
