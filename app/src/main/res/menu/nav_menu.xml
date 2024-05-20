@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+<item android:title="@string/cat1">
+    <menu>
+        <item android:title="menu11" android:id="@+id/menu11" android:icon="@drawable/ic_del"/>
+        <item android:title="menu12" android:id="@+id/menu12" android:icon="@drawable/ic_save"/>
+
+
+    </menu>
+
+</item>
+<item android:title="@string/cat2"></item>
+<item android:title="@string/cat3"></item>
+</menu>

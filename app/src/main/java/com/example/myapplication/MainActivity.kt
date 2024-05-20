@@ -20,6 +20,13 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             open.setOnClickListener {
                 drawer.openDrawer(GravityCompat.START)
+                navView.setNavigationItemSelectedListener {
+                    when (it.itemId) {
+                        R.id.menu11 -> Toast.makeText(this@MainActivity, "Item11", Toast.LENGTH_SHORT).show()
+                    }
+                    //drawer.closeDrawer(GravityCompat.START)
+                    true
+                }
             }
         }
         /*supportActionBar?.setDisplayHomeAsUpEnabled(true)
