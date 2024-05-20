@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Admin"
+        /*supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Admin"*/
         //binding.bNav.selectedItemId = R.id.ic_del
-        binding.bNav.setOnNavigationItemSelectedListener {
+       /* binding.bNav.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 // android.R.id.home -> finish()
                 R.id.ic_save -> {
@@ -30,10 +30,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             true
-        }
+        }*/
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+   /* override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         menuInflater.inflate(R.menu.bottom_menu, menu)
         return true
@@ -45,6 +45,6 @@ class MainActivity : AppCompatActivity() {
 
         }
         return true
-    }
+    }*/
 
 }
