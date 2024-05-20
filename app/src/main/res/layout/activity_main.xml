@@ -12,15 +12,49 @@
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Main content" />
+
+        <Button
+            android:id="@+id/open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open menu" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="200dp"
+        android:background="@color/black"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_gravity="start"
-        android:background="#4CAF50"
-        android:text="TextView" />
+        >
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </LinearLayout>
+
 </androidx.drawerlayout.widget.DrawerLayout>

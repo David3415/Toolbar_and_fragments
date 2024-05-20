@@ -6,6 +6,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import com.example.myapplication.databinding.ActivityMainBinding
 
 
@@ -16,35 +17,40 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.apply {
+            open.setOnClickListener {
+                drawer.openDrawer(GravityCompat.START)
+            }
+        }
         /*supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Admin"*/
         //binding.bNav.selectedItemId = R.id.ic_del
-       /* binding.bNav.setOnNavigationItemSelectedListener {
-            when (it.itemId) {
-                // android.R.id.home -> finish()
-                R.id.ic_save -> {
-                    Toast.makeText(this, "Del", Toast.LENGTH_SHORT).show()
-                }
-                R.id.ic_sync -> {
-                    Toast.makeText(this, "Sync", Toast.LENGTH_SHORT).show()
-                }
-            }
-            true
-        }*/
+        /* binding.bNav.setOnNavigationItemSelectedListener {
+             when (it.itemId) {
+                 // android.R.id.home -> finish()
+                 R.id.ic_save -> {
+                     Toast.makeText(this, "Del", Toast.LENGTH_SHORT).show()
+                 }
+                 R.id.ic_sync -> {
+                     Toast.makeText(this, "Sync", Toast.LENGTH_SHORT).show()
+                 }
+             }
+             true
+         }*/
     }
 
-   /* override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        menuInflater.inflate(R.menu.bottom_menu, menu)
-        return true
-    }
+    /* override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+         menuInflater.inflate(R.menu.main_menu, menu)
+         menuInflater.inflate(R.menu.bottom_menu, menu)
+         return true
+     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            // android.R.id.home -> finish()
+     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+         when (item.itemId) {
+             // android.R.id.home -> finish()
 
-        }
-        return true
-    }*/
+         }
+         return true
+     }*/
 
 }
