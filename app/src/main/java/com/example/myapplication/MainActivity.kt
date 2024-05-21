@@ -10,27 +10,22 @@ import com.example.myapplication.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding:ActivityMainBinding
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding=ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportFragmentManager.beginTransaction().replace(binding.placeHolder.id,BlankFragment.newInstance()).commit()
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            // android.R.id.home -> finish()
-            R.id.ic_sync -> Toast.makeText(this, "Sync", Toast.LENGTH_SHORT).show()
-
+        binding.bFrag2.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(binding.placeHolder.id, BlankFragment2.newInstance()).commit()
         }
-        return true
+
+        supportFragmentManager.beginTransaction()
+            .replace(binding.placeHolder.id, BlankFragment.newInstance()).commit()
+
+
     }
 
 
