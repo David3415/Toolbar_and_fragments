@@ -19,6 +19,9 @@ class BlankFragment2 : Fragment() {
         return  bindding.root
        // return inflater.inflate(R.layout.fragment_blank2, container, false)
        // return inflater.inflate(R.layout.fragment_blank2, container, false)
+       // return inflater.inflate(R.layout.fragment_blank2, container, false)
+       // return inflater.inflate(R.layout.fragment_blank2, container, false)
+       // return inflater.inflate(R.layout.fragment_blank2, container, false)
     }
 
     companion object {
