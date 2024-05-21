@@ -1,10 +1,8 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.myapplication.databinding.ActivityMainBinding
@@ -12,6 +10,7 @@ import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    private  val dataModel:DataModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         openFrag(BlankFragment.newInstance(), R.id.place_holder)
         openFrag(BlankFragment2.newInstance(), R.id.place_holder2)
 
+        dataModel.message_for_activity.observe(this,{
+            binding.textView.text=it
+        })
       /*  supportFragmentManager.beginTransaction()
             .replace(binding.placeHolder.id, BlankFragment.newInstance()).commit()*/
 
