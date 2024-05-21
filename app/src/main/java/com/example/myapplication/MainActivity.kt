@@ -6,15 +6,17 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Admin"
+        binding=ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        supportFragmentManager.beginTransaction().replace(binding.placeHolder.id,BlankFragment.newInstance()).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -30,5 +32,6 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
+
 
 }
