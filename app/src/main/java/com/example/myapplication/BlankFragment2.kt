@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.myapplication.databinding.FragmentBlank2Binding
 
 
 class BlankFragment2 : Fragment() {
@@ -14,7 +15,9 @@ class BlankFragment2 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank2, container, false)
+        val bindding=FragmentBlank2Binding.inflate(inflater)
+        return  bindding.root
+       // return inflater.inflate(R.layout.fragment_blank2, container, false)
     }
 
     companion object {
