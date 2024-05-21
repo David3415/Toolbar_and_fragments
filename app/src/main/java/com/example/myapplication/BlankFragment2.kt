@@ -9,13 +9,6 @@ import android.view.ViewGroup
 
 class BlankFragment2 : Fragment() {
     // TODO: Rename and change types of parameters
-       override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,5 +17,9 @@ class BlankFragment2 : Fragment() {
         return inflater.inflate(R.layout.fragment_blank2, container, false)
     }
 
+    companion object {
+        @JvmStatic
+        fun newInstance() = BlankFragment2()
 
+    }
 }

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 class BlankFragment : Fragment() {
-   // lateinit var binding:
+    // lateinit var binding:
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -17,11 +17,8 @@ class BlankFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance() =
-            BlankFragment().apply {
-                arguments = Bundle().apply {
+       @JvmStatic
+       fun newInstance() = BlankFragment()
 
-                }
-            }
     }
 }
