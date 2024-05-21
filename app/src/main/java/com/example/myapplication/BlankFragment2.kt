@@ -18,10 +18,7 @@ class BlankFragment2 : Fragment() {
         val bindding=FragmentBlank2Binding.inflate(inflater)
         return  bindding.root
        // return inflater.inflate(R.layout.fragment_blank2, container, false)
-       // return inflater.inflate(R.layout.fragment_blank2, container, false)
-       // return inflater.inflate(R.layout.fragment_blank2, container, false)
-       // return inflater.inflate(R.layout.fragment_blank2, container, false)
-       // return inflater.inflate(R.layout.fragment_blank2, container, false)
+
     }
 
     companion object {
