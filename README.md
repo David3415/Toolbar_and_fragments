@@ -1,0 +1,5 @@
+BottomNavigationView
+DrawerLayout
+Fragment-2_lesson_33_final_view_model
+DrawerLayout-NavigationView
+ets
