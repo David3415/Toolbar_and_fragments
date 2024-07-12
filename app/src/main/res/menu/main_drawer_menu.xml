@@ -5,9 +5,11 @@
     <group>
         <item
             android:id="@+id/item1"
+            android:icon="@color/black"
             android:title="Item" />
         <item
             android:id="@+id/item2"
+            android:icon="@color/black"
             android:title="Item" />
     </group>
 
