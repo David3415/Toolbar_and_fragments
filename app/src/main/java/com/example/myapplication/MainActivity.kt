@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.menuprovider.MainFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,17 +18,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-      /*  supportFragmentManager.beginTransaction()
-            .replace(binding.placeHolder.id, BlankFragment.newInstance()).commit()*/
-
-       /* supportFragmentManager.beginTransaction()
-            .replace(binding.placeHolder2.id, BlankFragment2.newInstance()).commit()*/
-
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragmentsHost, MainFragment.newInstance())
+            .commit()
     }
-
-    private fun openFrag(fragment: Fragment, idHolder: Int) {
-        supportFragmentManager.beginTransaction()
-            .replace(idHolder, fragment).commit()
-    }
+}
+private fun replaceFragmentFun(){
 
 }
