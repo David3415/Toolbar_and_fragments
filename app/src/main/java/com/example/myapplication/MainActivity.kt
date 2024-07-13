@@ -24,6 +24,3 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 }
-private fun replaceFragmentFun(){
-
-}

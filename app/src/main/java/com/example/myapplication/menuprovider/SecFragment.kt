@@ -12,40 +12,40 @@ import android.widget.Toast
 import androidx.core.view.MenuProvider
 import com.example.myapplication.R
 
-class MainFragment : Fragment(), MenuProvider {
 
+class secFragment : Fragment(), MenuProvider {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.fragment_sec, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        requireActivity().addMenuProvider(this,viewLifecycleOwner)
+        requireActivity().addMenuProvider(this, viewLifecycleOwner)
     }
 
     companion object {
 
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance() = MainFragment()
+        fun newInstance() = secFragment()
     }
 
     override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-        menuInflater.inflate(R.menu.main_menu, menu)
+        menuInflater.inflate(R.menu.sec_activity_menu, menu)
     }
 
     override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
         when (menuItem.itemId) {
-            R.id.ic_sync -> {
+            R.id.return_back -> {
                 Toast.makeText(requireContext(), "Sync", Toast.LENGTH_LONG).show()
 
                 requireActivity().supportFragmentManager
                     .beginTransaction()
-                    .replace(R.id.fragmentsHost, secFragment.newInstance())
+                    .replace(R.id.fragmentsHost, MainFragment.newInstance())
                     .commit()
 
             }
