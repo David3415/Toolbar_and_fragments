@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Toolbar</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="frag_1">Frag 1</string>
     <string name="frag_2">Frag 2</string>
 </resources>

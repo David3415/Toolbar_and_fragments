@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/item1"
         android:name="com.example.myapplication.Item_1_Fragment"
-        android:label="fragment_item_2_"
-        tools:layout="@layout/fragment_item_2_">
+        android:label="@string/frag_1"
+        tools:layout="@layout/fragment_item_1_">
         <action
             android:id="@+id/action_item_1_Fragment_to_item_2_Fragment2"
             app:destination="@id/item2" />
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/item2"
         android:name="com.example.myapplication.Item_2_Fragment"
-        android:label="fragment_item_2_"
+        android:label="@string/frag_2"
         tools:layout="@layout/fragment_item_2_">
         <action
             android:id="@+id/action_item_2_Fragment2_to_item_1_Fragment"
