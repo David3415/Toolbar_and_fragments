@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.res.Resources.Theme
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

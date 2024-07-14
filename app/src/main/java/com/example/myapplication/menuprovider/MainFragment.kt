@@ -14,7 +14,8 @@ import com.example.myapplication.R
 
 class MainFragment : Fragment(), MenuProvider {
 
-    override fun onCreateView(
+        override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {

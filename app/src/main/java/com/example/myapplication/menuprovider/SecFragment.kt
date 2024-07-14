@@ -1,7 +1,7 @@
 package com.example.myapplication.menuprovider
 
+import android.app.Activity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
@@ -9,11 +9,21 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import android.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuProvider
+import androidx.fragment.app.Fragment
 import com.example.myapplication.R
 
 
 class secFragment : Fragment(), MenuProvider {
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+               (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +39,7 @@ class secFragment : Fragment(), MenuProvider {
 
     companion object {
 
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance() = secFragment()
     }
@@ -42,6 +52,7 @@ class secFragment : Fragment(), MenuProvider {
         when (menuItem.itemId) {
             R.id.return_back -> {
                 Toast.makeText(requireContext(), "Sync", Toast.LENGTH_LONG).show()
+                (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
                 requireActivity().supportFragmentManager
                     .beginTransaction()
