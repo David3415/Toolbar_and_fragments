@@ -2,11 +2,16 @@ package com.example.myapplication
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintSet.Layout
+import androidx.core.view.MenuProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -16,7 +21,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.myapplication.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MenuProvider {
     private lateinit var conf: AppBarConfiguration
     private lateinit var navController: NavController
     private lateinit var binding: ActivityMainBinding
@@ -27,11 +32,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.ab.toolbar)
-        var K = findViewById<View>(R.id.actionbar1)
-        //supportActionBar?.setTitle(R.string.back_to_main_frag)
 
-                //binding.ab.toolbar?.
-            //getSupportActionBar()?.setTitle("My title")
+        addMenuProvider(this)
         navController = findNavController(R.id.fragmentContainerView)
         conf = AppBarConfiguration(
             setOf(
@@ -44,8 +46,7 @@ class MainActivity : AppCompatActivity() {
         binding.navView.setupWithNavController(navController)
     }
 
-    var aa = "dfs"
-    override fun onSupportNavigateUp(): Boolean {
+       override fun onSupportNavigateUp(): Boolean {
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             when (destination.id) {
                 R.id.item1 -> {
@@ -66,4 +67,18 @@ class MainActivity : AppCompatActivity() {
 
         return navController.navigateUp(conf) || super.onSupportNavigateUp()
     }
+
+    override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+        menuInflater.inflate(R.menu.main_menu, menu)
+    }
+
+    override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+        when (menuItem.itemId) {
+
+
+        }
+        return true
+    }
 }
+
+
