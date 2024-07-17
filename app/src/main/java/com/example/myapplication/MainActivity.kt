@@ -31,42 +31,12 @@ class MainActivity : AppCompatActivity(), MenuProvider {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.ab.toolbar)
+      /*  setSupportActionBar(binding.ab.toolbar)
+        addMenuProvider(this)*/
 
-        addMenuProvider(this)
-        navController = findNavController(R.id.fragmentContainerView)
-        conf = AppBarConfiguration(
-            setOf(
-                R.id.item1,
-                R.id.item2
-            ), binding.drawerLayout
-        )
-
-        setupActionBarWithNavController(navController, conf)
-        binding.navView.setupWithNavController(navController)
     }
 
-       override fun onSupportNavigateUp(): Boolean {
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
-            when (destination.id) {
-                R.id.item1 -> {
-                    val resource = getString(R.string.frag_1)
-                    Log.d("MyLog", "res: $resource")
-                    title = resource
-                }
 
-                R.id.item2 -> {
-                    val resource = getString(R.string.frag_2)
-                    Log.d("MyLog", "res: $resource")
-                    title = resource
-                }
-
-                else -> "onSupportNavigateUp ERROR"
-            }
-        }
-
-        return navController.navigateUp(conf) || super.onSupportNavigateUp()
-    }
 
     override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
         menuInflater.inflate(R.menu.main_menu, menu)
