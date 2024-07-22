@@ -22,7 +22,7 @@ class Fragment1 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataModel.message_for_activity.observe(activity as LifecycleOwner,
+        dataModel.message_for_fragment1.observe(activity as LifecycleOwner,
             { binding.tvMessage.text = it })
         binding.bSendToActivity.setOnClickListener {
             dataModel.message_for_activity.value = "Hello Activity from fragment 1"
