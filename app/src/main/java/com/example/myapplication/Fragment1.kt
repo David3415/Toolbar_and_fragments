@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.myapplication.databinding.Fragment1Binding
 
-class BlankFragment : Fragment() {
+class Fragment1 : Fragment() {
     lateinit var binding: Fragment1Binding
     private val dataModel: DataModel by activityViewModels()
     override fun onCreateView(
@@ -30,7 +30,7 @@ class BlankFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = BlankFragment()
+        fun newInstance() = Fragment1()
 
     }
 }

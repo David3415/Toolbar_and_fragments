@@ -10,7 +10,7 @@ import androidx.lifecycle.LifecycleOwner
 import com.example.myapplication.databinding.Fragment2Binding
 
 
-class BlankFragment2 : Fragment() {
+class Fragment2 : Fragment() {
     private val dataModel: DataModel by activityViewModels()
     lateinit var binding: Fragment2Binding
 
@@ -34,7 +34,7 @@ class BlankFragment2 : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = BlankFragment2()
+        fun newInstance() = Fragment2()
 
     }
 }

@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        openFrag(BlankFragment.newInstance(), R.id.place_holder)
-        openFrag(BlankFragment2.newInstance(), R.id.place_holder2)
+        openFrag(Fragment1.newInstance(), R.id.place_holder)
+        openFrag(Fragment2.newInstance(), R.id.place_holder2)
 
         dataModel.message_for_activity.observe(this,{
             binding.textView.text=it
